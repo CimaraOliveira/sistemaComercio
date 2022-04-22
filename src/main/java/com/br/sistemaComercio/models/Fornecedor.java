@@ -7,21 +7,19 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_funcionario")
-public class Funcionrio {
+@Table(name="tb_fornecedor")
+public class Fornecedor {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Long id;
 	private String nome;
-	private String cpf;
-	private String telefone;
+	private Long codigo;
 	private String descricao;
-	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNome() {
@@ -30,17 +28,11 @@ public class Funcionrio {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getCpf() {
-		return cpf;
+	public Long getCodigo() {
+		return codigo;
 	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-	public String getTelefone() {
-		return telefone;
-	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
 	}
 	public String getDescricao() {
 		return descricao;
